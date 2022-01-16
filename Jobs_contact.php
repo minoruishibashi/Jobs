@@ -24,7 +24,7 @@
 </header>
 
 <main>
-    <form action="Jobs_contact_confirm.php" method="POST">
+    <form action="contactinfo.php" method="POST">
         <section id="contact">
                 <dl>
                     <div class="contactflex">
@@ -35,9 +35,9 @@
                             <dd><input type="email" name="email" id="email"></dd>
                             <dt>お問い合わせ内容</dt>
                             <dd>
-                                <label for="method"><input type="radio" name="method" id="method" value="判定メソッド関係">判定メソッド関係</label>
-                                <label for="schedule"><input type="radio" name="method" id="schedule" value="スケジュール関係">スケジュール関係</label>
-                                <label for="other"><input type="radio" name="method" id="other" value="その他">その他</label>
+                                <label for="method"><input type="radio" name="category" id="method" value="判定メソッド関係">判定メソッド関係</label>
+                                <label for="schedule"><input type="radio" name="category" id="schedule" value="スケジュール関係">スケジュール関係</label>
+                                <label for="other"><input type="radio" name="category" id="other" value="その他">その他</label>
                             </dd>
                         </div>
                         <div class="contactright">
