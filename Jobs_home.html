@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Jobs_home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <title>Jobs_home</title>
+</head>
+<body>
+
+<header>
+    <div class="Muta-son">
+        <img src="images/Jobs_home.png" alt="logo">
+    </div>
+    <nav>        
+        <a href="Jobs_explain.html">全体像</a> 
+        <a href="Jobs_contact.html">お問い合わせ</a> 
+        <a href="Jobs_gradesystem.html">職務評価について</a>
+        <a href="Jobs_start.html">Start画面</a>
+        
+        
+        
+    </nav>
+</header>
+
+<main>
+    <section class="applyjudge">
+            <div class="apply">
+                <p class="applyname">申請はこちら↓</p>
+                <a href="Jobs_apply_login.html">
+                <button class="btn_apply"><img src="images/申請者.png" alt="申請者"></button></a>
+            </div>
+
+            <div class="judge">
+                <p class="judgename">人事部専用</p>
+                <a href="Jobs_judge_login.html">
+                <button class="btn_judge"><img src="images/人事部.png" alt="人事部"></button></a>
+            </div>
+   </section>
+   
+   <section>
+    <div class="luck">
+        <button id="luck">運試し🤗</button>
+        <div class="result">
+            <p id="result"></p>
+        </div>
+    </div>
+   </section>
+
+   <section>
+       <p id="choice">日時</p>
+   </section>
+</main>
+
+
+<footer>
+    <p><small>&copy; copyrights 2021-2023 Minoru Ishibashi All Rights Reserved.</small></p>
+</footer>
+
+
+<script>
+    // 時間を表示
+    document.getElementById("choice").textContent=new Date();
+
+    // おみくじアプリの復習
+    $("#luck").on("click",function(){
+        alert("申請したらどうなるかなー？");
+        const r = Math.ceil(Math.random()*5);
+    let view = "";
+    if(r==1){
+        view = "大吉。余裕で一括ですかね。"
+    }
+    else if(r==2){
+        view = "中吉。すっと一括いけるかも。"
+    }
+    else if(r==3){
+        view = "吉。 堂々と申請しちゃいましょう。"
+    }
+    else if(r==4){
+        view = "小吉。 個別か一括か微妙かもしれませんね。"
+    }
+    else if(r==5){
+        view = "凶。 個別もしくは取り下げをお願いするかも（笑）"
+    }
+        $("#result").html(view);
+    });
+
+
+</script>
+
+</body>
+</html>

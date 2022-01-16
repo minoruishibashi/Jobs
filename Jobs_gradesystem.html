@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Jobs_gradesystem.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <title>Muta-son_gradesystem</title>
+</head>
+<body>
+
+<header>
+
+    <p class="pagetitle">経営職務グレード判定 評価項目</p>
+    <nav>        
+        <a href="Jobs_contact.html">お問い合わせ</a> 
+        <a href="Jobs_home.html">HOME</a> 
+    </nav>
+</header>
+<main>
+
+    <div class="slide">
+        <div class="image_box">
+            <img id="main_image" src="images/grade0.jpg" alt="slide">
+        </div>
+        <div class="toolbar">
+            <div class="navigator">
+                <div id="prev"></div>
+                <div id="next"></div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+</main>
+
+
+<footer>
+    <p><small>&copy; copyrights 2021-2023 Minoru Ishibashi All Rights Reserved.</small></p>
+</footer>
+
+
+<script>
+// スライドショー（矢印ボタンで進んだり戻ったり）
+const images = ['images/grade0.jpg', 'images/grade1.jpg', 'images/grade2.jpg', 
+'images/grade3.jpg', 'images/grade4.jpg', 'images/grade5.jpg', 'images/grade6.jpg', 
+'images/grade7.jpg', 'images/grade8.jpg', 'images/grade9.jpg', 'images/grade10.jpg', 
+'images/grade11.jpg', 'images/grade12.jpg', 'images/grade13.jpg', 'images/grade14.jpg', 
+'images/grade15.jpg', 'images/grade16.jpg', 'images/grade17.jpg', 'images/grade18.jpg'];
+let current = 0;
+
+function changeImage(num) {
+    if(current + num >= 0 && current + num < images.length) {
+        current += num;
+        document.getElementById("main_image").src = images[current];
+    }
+}
+
+document.getElementById("prev").onclick = function() {
+    changeImage(-1);
+}
+document.getElementById("next").onclick = function() {
+    changeImage(1);
+}
+
+</script>
+
+</body>
+</html>

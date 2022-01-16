@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+html {
+    font-size:62.5%;
+}
+
+body {
+    background-image: url(cssimags/Pexel_blue1.jpg);
+    background-size: cover;
+    font-family: "Open Sans";
+    font-size: 1.4rem;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+textarea {
+    background: rgba(255, 255, 255, .5);
+    border: 1px #fff solid;
+    border-radius: 4px;
+}
+
+input{
+    background: rgba(255, 255, 255, .5);
+    border: 1px #fff solid;
+    border-radius: 4px;
+}
+
+
+nav{
+    margin: 20px 20px 0;
+}
+
+.Muta-son {
+    max-width: 40%;
+    height: auto;
+}
+
+.applyjudge{
+    display: flex;
+    justify-content: space-around;
+    margin: 60px;
+}
+
+.apply {
+    max-width: 20%;
+    height: auto;
+}
+
+.btn_apply {
+    background-color: transparent;
+    border: none;
+}
+.btn_apply:hover{
+    background-color: #ffff;
+    border: none;
+    border-radius: 10%;
+}
+
+.judge {
+    max-width: 20%;
+    height: auto;
+}
+
+.btn_judge {
+    background-color: transparent;
+    border: none;
+}
+
+.btn_judge:hover {
+    background-color: #ffff;
+    border: none;
+    border-radius: 10%;
+}
+
+.applyname{
+    margin: 0 0 10px;
+    color: #ffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.judgename{
+    margin: 0 0 10px;
+    color: #ffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav {
+font-size: 20px;
+font-weight: bold;
+}
+
+#contact {
+    margin-top: 30px;
+    display: block;
+    color: darkblue;
+}
+
+.contactflex {
+    display: flex;
+    justify-content: center;
+}
+
+.contactleft  {
+    margin: 8px;
+}
+.contactright   {
+    margin: 8px;
+}
+.sendbtn   {
+    margin: 20px;
+}
+
+.oldmethod {
+    margin: 20px 20px 0;
+}
+
+.luck {
+    text-align: center;
+}
+
+#luck {
+    font-size: 20px;
+    color: darkslateblue;
+    border-radius: 50%;
+}
+
+#luck:hover{
+    font-size: 20px;
+    font-weight: bold;
+    color: #904644;
+}
+
+.result {
+    margin: 50px;
+    font-size: 20px;
+    color: #ffff;
+    font-weight: bold;
+}
+
+#choice {
+    margin: 100px;
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+    font-weight: bold;
+}
+
+
+footer {
+    background: #7acbe1;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}

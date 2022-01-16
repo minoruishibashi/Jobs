@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+main {
+    max-width: 700px;
+    size: A4 portrait;
+    margin: 0px;
+}
+
+table, td, th   {
+    border: 2px #808080 solid;
+}
+
+.wrapper {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.first {
+    margin: 3px;
+}
+
+.second {
+    margin: 3px;
+}
+
+.third {
+    margin: 3px;
+}
+
+.fourth {
+    margin: 3px;
+}
+
+.fifth {
+    margin: 3px;
+}
+
+.sixth {
+    margin: 3px;
+}
