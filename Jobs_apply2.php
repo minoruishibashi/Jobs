@@ -24,7 +24,7 @@
 
 <main>
 
-<form action="Mission.php" method="POST">
+<form action="Jobs_mission.php" method="POST">
     <h1>（１）基本情報</h1>
     <div class="baseinfo">
         <div class="base1">
@@ -58,13 +58,10 @@
                         <option value="全社組織">全社組織</option>
                     </select>
                 </dd>
-
                 <dt>本部</dt>
                 <dd><input type="text" name="honbu"></dd>
-
                 <dt>所属</dt>
                 <dd><input type="text" name="shozoku"></dd>
-
                 <dt>役職</dt>
                 <dd><input type="text" name="title"></dd>
             </dl>
@@ -74,10 +71,8 @@
             <dl>
                 <dt>就任予定者</dt>
                 <dd><input type="text" name="candidate"></dd>
-
                 <dt>従業員番号</dt>
                 <dd><input type="text" name="candidatenumber"></dd>
-
                 <dt>開始予定日</dt>
                 <dd><input type="date" name="startdate"></dd>
             </dl>
@@ -182,19 +177,20 @@
 
     <h1>（３）補足情報</h1>
     <div class="additional">
-        <dl>
-            <dt>事業類型</dt>
-            <dt>
-                <select name="ruikei" id="ruikei">
-                    <option value="-">-</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="E">E</option>
-                </select>
-            </dt>
-            <a href="Jobs_ruikei.html">事業類型について</a> 
+        <div class="additional1">
+            <dl>
+                <dt>事業類型</dt>
+                <dt>
+                    <select name="ruikei" id="ruikei">
+                        <option value="-">-</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </dt>
+                <a href="Jobs_ruikei.html">事業類型について</a> 
         
             <dt>職務タイプ</dt>
             <dd>
@@ -226,12 +222,16 @@
 
             <dt>上位ポジション（レポートTO）</dt>
             <dd><input type="text" name="boss"></dd>
-        </dl>
-
+            </dl>
+        </div>
+        
+        <div class="additional2">
             <dt>申請の理由/背景</dt>
                 <dd><textarea name="reason" id="reason" cols="80" rows="7"></textarea></dd>
+        </div>
 
     </div>
+
     <div class="sendbtn">
         <input type="submit" value="グレード申請内容確認">
     </div> 

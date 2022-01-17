@@ -9,7 +9,6 @@ body  {
     min-height: 100vh;
     background-size: cover;
     font-family: "Open Sans";
-    font-size: 1rem;
 }
 
 header{
@@ -18,6 +17,7 @@ header{
     padding: 20px;
     background-color: white;
     font-weight: bold;
+    font-size: 20px;
 }
 
 h1 {
@@ -29,6 +29,7 @@ h1 {
 
 .baseinfo {
     display: flex;
+    padding-bottom: 10px;
     background-image: linear-gradient(#eaf6fd, #2279a5);
 }
 
@@ -100,102 +101,37 @@ h2 {
 }
 
 .additional {
-    
-}
-
-/* 
-#hosoku {
-    font-size: 5px;
-}
-
-.basicinfo dl dt{
-    width: 165px;
-    padding: 3px 0;
-    float: left;
-    clear: both;
-}
-.basicinfo dl dd {
-    padding: 3px 0;
-}
-
-
-.magnitude dl dt{
-    width: 165px;
-    padding: 3px 0;
-    float: left;
-    clear: both;
-}
-.magnitude dl dd {
-    padding: 2px 0;
-}
-
-.additonal dl dt{
-    width: 165px;
-    padding: 3px 0;
-    float: left;
-    clear: both;
-}
-.additional dl dd {
-    padding: 3px 0;
-}
-
-
-.basicinfo {
     display: flex;
-    margin: 8px;
+    background-image: linear-gradient(#eaf6fd, #2279a5);
 }
 
-.magnitude {
-    display: flex;
-    margin: 8px;
+.additional1 {
+    margin: 10px 10px;
+}
+.additional2 {
+    margin: 10px 10px;
 }
 
-.additional {
-    display: flex;
-    margin: 8px;
-}
-
-.basic1 {
-    margin: 8px;
-}
-.basic2 {
-    margin: 8px;
-}
-.basic3 {
-    margin: 8px;
-}
-.past3 {
-    margin: 8px;
-}
-.past3 p {
+.additional1 dt {
+    margin: 5px;
     font-weight: bold;
 }
-.future3 {
-    margin: 8px;
-}
-.future3 p {
-    font-weight: bold;
-}
-.bikou {
-    margin: 8px;
-}
-
-.bikou p {
+.additional2 dt {
+    margin: 5px;
     font-weight: bold;
 }
 
-.type {
-    margin: 8px;
+.sendbtn {
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-color: silver;
 }
-.reason {
-    margin: 8px;
-}
-.startdate {
-    margin: 8px;
-} */
+
+
 
 .sendbtn :hover {
-    text-align: center;
     font-weight: bold;
-    margin: 20px;
+    color: maroon;
 }
