@@ -56,6 +56,7 @@ $reason = $_POST["reason"];
 
 ?>
 
+<form action="#" method="POST">
 <div class="wrapper">
     <h1>基本情報</h1>
     <table class="first">
@@ -147,10 +148,10 @@ $reason = $_POST["reason"];
     </table>
 </div>
 
-
-
-
-
+<div class="sendbtn">
+        <input type="submit" value="グレード申請送信">
+</div>
+</form>
 
 <script>
 

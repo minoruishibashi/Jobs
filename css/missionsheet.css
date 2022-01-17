@@ -16,37 +16,48 @@ table, td, th   {
 }
 
 .first {
-    margin: 3px;
+    margin: 5px;
 }
 
 .second {
-    margin: 3px;
+    margin: 5px;
 }
 
 .third {
-    margin: 3px;
+    margin: 5px;
 }
 
 .fourth {
-    margin: 3px;
+    margin: 5px;
 }
 
 .fifth {
-    margin: 3px;
+    margin: 5px;
 }
 
 .sixth {
-    margin: 3px;
+    margin: 5px;
 }
 
 .seventh {
-    margin: 3px;
+    margin: 5px;
 }
 
 .eighth {
-    margin: 3px;
+    margin: 5px;
 }
 
 .ninth {
-    margin: 3px;
+    margin: 5px;
+}
+
+.sendbtn {
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.sendbtn :hover {
+    font-weight: bold;
+    color: maroon;
 }
