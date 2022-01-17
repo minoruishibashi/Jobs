@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+html {
+    font-size:62.5%;
+}
+
+body {
+    background-color: wheat;
+    background-size: cover;
+    font-family: "Open Sans";
+    font-size: 1.4rem;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+main {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 20px;
+}
+
+nav{
+    margin: 20px 20px 0;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Muta-son {
+    max-width: 30%;
+    height: auto;
+}

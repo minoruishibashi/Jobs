@@ -43,6 +43,10 @@
             <dd><input type="text" name="candidate"></dd>
             <dt>従業員番号</dt>
             <dd><input type="text" name="candidatenumber"></dd>
+            <dt>開始日</dt>
+            <dd><input type="date" name="startdate"></dd>
+            <div class="startdate">
+        </div>
         </dl>
         </div>
         <div class="basic2">
@@ -73,11 +77,12 @@
             <dd><input type="text" name="title"></dd>
         </div>
         <div class="basic3">
-            <dt>当該職務の役割</dt>
+            <dt>当該職務の役割（当該職務に求められる役割を具体的に記載願います）</dt>
             <dd><textarea name="mission" id="mission" cols="100" rows="8"></textarea></dd>
         </div>
     </div>
     <section>定量情報/類型/事業ステージ</section>
+    <p id="hosoku">管下組織の事業規模（本店営業部長・事業会社経営執行責任者は必須。その他ポジションの場合でもデータ取得可能な範囲でご記入願います）</p>
     <div class="magnitude">
         <div class="past3">
             <p>直近3年間の利益実績（純利益）</p>
@@ -101,6 +106,13 @@
                 <dd><input type="number" name="profit_plan3">億円</dd>
             </dl>
         </div>
+        <div class="bikou">
+            <p>参考情報</p>
+            <dl>
+                <dt>管下組織の従業員数</dt>
+                <dd><input type="number" name="employee"></dd>
+            </dl>
+        </div>
         <div class="type">
             <dl>
                 <dt>事業類型</dt>
@@ -115,10 +127,14 @@
                 <dt>職務タイプ</dt>
                 <dd><select name="jobtype" id="jobtype">
                     <option value="-">-</option>
-                    <option value="事業会社社長">事業会社ラインポジション</option>
+                    <option value="事業会社トップ">事業会社トップ</option>
+                    <option value="事業会社ラインポジション">事業会社ラインポジション</option>
                     <option value="本店営業部長">本店営業部長</option>
-                    <option value="コーポレート">コーポレート</option>
+                    <option value="営業グループ機能別担当">営業グループ機能別担当</option>
+                    <option value="コーポレート部長">コーポレート部長</option>
+                    <option value="コーポレート部長代行">コーポレート部長代行</option>
                     <option value="全社拠点長">全社拠点長</option>
+                    <option value="全社拠点ラインポジション">全社拠点ラインポジション</option>
                     <option value="その他">その他</option>
                 </select></dd>
                 <dt>事業ステージ</dt>
@@ -132,15 +148,12 @@
                 </select></dd>
             </dl>
         </div>
-        <div class="sanko">
-            <dt>（参考）旧メソッド定量基準</dt>
-            <dd><select name="grade_oldmethod" id="">
-                <option value="-">-</option>
-                <option value="G2以下">G2以下</option>
-                <option value="G3">G3</option>
-                <option value="G4">G4</option>
-                <option value="G5">G5</option>
-            </select></dd>
+        <div class="oldmethod">
+            <nav>        
+                <a href="Muta_oldmethod.html">旧メソッド定量基準</a> 
+            </nav>
+        </div>
+            
         </div>
     </div>
 
@@ -152,14 +165,9 @@
                 <dd><textarea name="apply_reason" id="reason" cols="100" rows="6"></textarea></dd>
             </dl>
         </div>
-        <div class="startdate">
-            <dl>
-                <dt>開始日</dt>
-                <dd><input type="date" name="startdate"></dd>
-            </dl>
-        </div>
     </div>
 
+    <section></section>
     <div class="sendbtn">
         <input type="submit" value="グレード申請送信">
     </div> 
