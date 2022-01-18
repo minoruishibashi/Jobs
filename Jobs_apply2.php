@@ -93,24 +93,28 @@
             <div class="profit_result">
                 <p class="ptitle">直近3年の利益実績（純利益）※</p>
                 <dl>
-                    <dt>2018年</dt>
+                    <dt>当年-3年</dt>
                     <dd><input type="number" name="profit_result1">億円</dd>
-                    <dt>2019年</dt>
+                    <dt>当年-2年<</dt>
                     <dd><input type="number" name="profit_result2">億円</dd>
-                    <dt>2020年</dt>
+                    <dt>当年-1年</dt>
                     <dd><input type="number" name="profit_result3">億円</dd>
+                    <dt>直近3年の平均</dt>
+                    <dd><input type="number" name="profit_resultave">億円</dd>
                 </dl>
             </div>
 
             <div class="profit_plan">
                 <p class="ptitle">3年先迄の利益計画（純利益）※</p>
                 <dl>
-                    <dt>2021年</dt>
+                    <dt>当年</dt>
                     <dd><input type="number" name="profit_plan1">億円</dd>
-                    <dt>2022年</dt>
+                    <dt>当年+1年</dt>
                     <dd><input type="number" name="profit_plan2">億円</dd>
-                    <dt>2023年</dt>
+                    <dt>当年+2年</dt>
                     <dd><input type="number" name="profit_plan3">億円</dd>
+                    <dt>今後3年の平均</dt>
+                    <dd><input type="number" name="profit_planave">億円</dd>
                 </dl>
             
             </div>      
@@ -136,24 +140,28 @@
             <div class="profit_result">
                 <p class="ptitle">直近3年の利益実績（純利益）</p>
                 <dl>
-                    <dt>2018年</dt>
+                    <dt>当年-3年</dt>
                     <dd><input type="number" name="profitS_result1">億円</dd>
-                    <dt>2019年</dt>
+                    <dt>当年-2年</dt>
                     <dd><input type="number" name="profitS_result2">億円</dd>
-                    <dt>2020年</dt>
+                    <dt>当年-3年</dt>
                     <dd><input type="number" name="profitS_result3">億円</dd>
+                    <dt>直近3年の平均</dt>
+                    <dd><input type="number" name="profitS_resultave">億円</dd>
                 </dl>
             </div>
 
             <div class="profit_plan">
                 <p class="ptitle">3年先迄の利益計画（純利益）</p>
                 <dl>
-                    <dt>2021年</dt>
+                    <dt>当年</dt>
                     <dd><input type="number" name="profitS_plan1">億円</dd>
-                    <dt>2022年</dt>
+                    <dt>当年+1年</dt>
                     <dd><input type="number" name="profitS_plan2">億円</dd>
-                    <dt>2023年</dt>
+                    <dt>当年+2年</dt>
                     <dd><input type="number" name="profitS_plan3">億円</dd>
+                    <dt>今後3年の平均</dt>
+                    <dd><input type="number" name="profitS_planave">億円</dd>
                 </dl>
             </div>
                 

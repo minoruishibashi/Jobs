@@ -14,10 +14,6 @@
 </head>
 <body>
 
-<header>
-
-</header>
-
 <main>
 <?php
 
@@ -33,17 +29,21 @@ $mission = $_POST["mission"];
 $profit_result1 = $_POST["profit_result1"];
 $profit_result2 = $_POST["profit_result2"];
 $profit_result3 = $_POST["profit_result3"];
+$profit_resultave = $_POST["profit_resultave"];
 $profit_plan1 = $_POST["profit_plan1"];
 $profit_plan2 = $_POST["profit_plan2"];
 $profit_plan3 = $_POST["profit_plan3"];
+$profit_planave = $_POST["profit_planave"];
 $headcount = $_POST["headcount"];
 $bikou_1 = $_POST["bikou_1"];
 $profitS_result1 = $_POST["profitS_result1"];
 $profitS_result2 = $_POST["profitS_result2"];
 $profitS_result3 = $_POST["profitS_result3"];
+$profitS_resultave = $_POST["profitS_resultave"];
 $profitS_plan1 = $_POST["profitS_plan1"];
 $profitS_plan2 = $_POST["profitS_plan2"];
 $profitS_plan3 = $_POST["profitS_plan3"];
+$profitS_planave = $_POST["profitS_planave"];
 $headcountS = $_POST["headcountS"];
 $headcountSR = $_POST["headcountSR"];
 $bikou_2 = $_POST["bikou_2"];
@@ -56,34 +56,79 @@ $reason = $_POST["reason"];
 
 ?>
 
-<form action="#" method="POST">
-<div class="wrapper">
-    <h1>基本情報</h1>
-    <table class="first">
-        <tr>
-            <td>申請グレード</td>
-            <td><?=$applygrade?></td>
-            <td>所属・役職</td>
-            <td><?=$mcgroup?></td>    
-            <td><?=$honbu?></td>
-            <td><?=$shozoku?></td>
-            <td><?=$title?></td>
-            <td>就任予定者</td>
-            <td><?=$candidate?>（<?=$candidatenumber?>）</td>
-            <td>開始日</td>
-            <td><?=$startdate?></td>
-        </tr>
-    </table>
+<div class="pagetitle">
+    <p>グレード申請内容確認</p>
 </div>
 
-<div class="wrapper">
-    <h1>当該職務の役割</h1>
-    <table class="third">
-        <tr>
-            <td><?=$mission?></td>
-        </tr>
-    </table>
-</div>
+<form action="#" method="POST">
+    <div class="grade">
+        <table>
+            <tr><th>申請グレード</th><td><?=$applygrade?></td></tr>        
+            <tr><th>開始日</th><td><?=$startdate?></td></tr>
+            
+        </table>
+    </div>
+
+    <div class="wrapper">
+        <h1>A. 基本情報/ミッション</h1>
+        <table class="first">
+            <tr>
+                <th>グループ/部門</th>
+                <td><?=$mcgroup?></td>
+            </tr>
+            <tr>
+                <th>本部</th>
+                <td><?=$honbu?></td>
+            </tr>
+            <tr>
+                <th>所属</th>
+                <td><?=$shozoku?></td>
+            </tr>
+            <tr>
+                <th>役職</th>
+                <td><?=$title?></td>
+            </tr>    
+        </table>
+        <table class="first">
+            <tr>
+                <th>就任予定者</th>
+                <td><?=$candidate?>（<?=$candidatenumber?>）</td>
+            </tr>    
+        </table>
+        <table class="second">
+            <tr>
+                <th>当該職務の役割/ミッション</th>
+                <td><?=$mission?></td>
+            </tr>    
+        </table>
+    </div>
+
+    <div class="wrapper">
+        <h1>B. 定量的情報</h1>
+        <h2>①管下組織の定量的情報</h2>
+        <div class="profit">
+            <div class="p_result">
+                <h3>◆直近3年の利益実績（純利益）</h3>
+                <table>
+                <tr>
+                    <th>当年-3年</th>
+                    <td><?=$profit_result3?></td>
+                </tr>
+                <tr>
+                    <th>当年-2年</th>
+                    <td><?=$profit_result2?></td>
+                </tr>
+                <tr>
+                    <th>当年-1年</th>
+                    <td><?=$profit_result1?></td>
+                </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
 
 <div class="wrapper">
     <h1>管下組織の事業規模</h1>

@@ -1,13 +1,63 @@
 @charset "utf-8";
 
 main {
-    max-width: 700px;
+    max-width: 760px;
     size: A4 portrait;
-    margin: 0px;
+    margin: 20px;
+}
+
+.pagetitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 table, td, th   {
-    border: 2px #808080 solid;
+    border: 1px hsl(0, 0%, 50%) solid;
+}
+
+h1 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.grade {
+    margin: 10px 20px;
+}
+.grade th {
+    background-color: lightblue;
+    width: 120px;
+}
+.grade td {
+    width: 120px;
+    text-align: center;
+}
+.first {
+    margin: 10px 20px;
+}
+.first th {
+    background-color: lightblue;
+    width: 120px;
+}
+.first td {
+    width: 600px;
+    text-align: center;
+}
+.second {
+    margin: 10px 20px;
+}
+.second th {
+    background-color: lightblue;
+    width: 120px;
+}
+.second td {
+    width: 600px;
 }
 
 .wrapper {
@@ -15,13 +65,19 @@ table, td, th   {
     margin-left: 20px;
 }
 
-.first {
-    margin: 5px;
+.profit {
+    display: flex;
+}
+.profit th {
+    background-color: lightblue;
+    width: 120px;
+}
+.profit td {
+    width: 200px;
 }
 
-.second {
-    margin: 5px;
-}
+
+
 
 .third {
     margin: 5px;
