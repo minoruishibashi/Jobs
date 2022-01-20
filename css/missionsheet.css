@@ -31,7 +31,7 @@ h2 {
     margin: 10px 20px;
 }
 .grade th {
-    background-color: lightblue;
+    background-color: lightyellow;
     width: 120px;
 }
 .grade td {
@@ -76,36 +76,36 @@ h2 {
     width: 200px;
 }
 
-
-
-
-.third {
-    margin: 5px;
+#result {
+    margin: 0 20px;
 }
 
-.fourth {
-    margin: 5px;
+#plan {
+    margin: 0 20px;
 }
 
-.fifth {
-    margin: 5px;
+#headcount {
+    margin: 5px 20px;
+}
+#headcount th {
+    background-color: lightblue;
+    width: 200px;
+}
+#headcount td {
+    width: 200px;
+}
+#bikou {
+    margin: 5px 20px;
+}
+#bikou th {
+    background-color: lightblue;
+    width: 120px;
+}
+#bikou td {
+    width: 600px;
 }
 
-.sixth {
-    margin: 5px;
-}
 
-.seventh {
-    margin: 5px;
-}
-
-.eighth {
-    margin: 5px;
-}
-
-.ninth {
-    margin: 5px;
-}
 
 .sendbtn {
     margin-top: 10px;
