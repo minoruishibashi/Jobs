@@ -64,8 +64,8 @@ $reason = $_POST["reason"];
 <form action="Jobs_mission_insert.php" method="POST">
     <div class="grade">
         <table>
-            <tr><th>申請グレード</th><td><?=$applygrade?></td></tr>        
-            <tr><th>開始日</th><td><?=$startdate?></td></tr>
+            <tr><th>申請グレード</th><td name="applygrade"><?=$applygrade?></td></tr>        
+            <tr><th>開始日</th><td name="startdate"><?=$startdate?></td></tr>
             
         </table>
     </div>
@@ -75,31 +75,32 @@ $reason = $_POST["reason"];
         <table class="first">
             <tr>
                 <th>グループ/部門</th>
-                <td><?=$mcgroup?></td>
+                <td name="mcgroup"><?=$mcgroup?></td>
             </tr>
             <tr>
                 <th>本部</th>
-                <td><?=$honbu?></td>
+                <td name="honbu"><?=$honbu?></td>
             </tr>
             <tr>
                 <th>所属</th>
-                <td><?=$shozoku?></td>
+                <td name="shozoku"><?=$shozoku?></td>
             </tr>
             <tr>
                 <th>役職</th>
-                <td><?=$title?></td>
+                <td name="title"><?=$title?></td>
             </tr>    
         </table>
         <table class="first">
             <tr>
                 <th>就任予定者</th>
-                <td><?=$candidate?>（<?=$candidatenumber?>）</td>
+                <td name="candidate"><?=$candidate?></td>
+                <td name="candidatenumber"><?=$candidatenumber?></td>
             </tr>    
         </table>
         <table class="second">
             <tr>
                 <th>当該職務の役割/ミッション</th>
-                <td><?=$mission?></td>
+                <td name="mission"><?=$mission?></td>
             </tr>    
         </table>
     </div>
@@ -113,19 +114,19 @@ $reason = $_POST["reason"];
                 <table id="result">
                 <tr>
                     <th>当年-3年</th>
-                    <td><?=$profit_result3?>　億円</td>
+                    <td name="profit_result3"><?=$profit_result3?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年-2年</th>
-                    <td><?=$profit_result2?>　億円</td>
+                    <td name="profit_result2"><?=$profit_result2?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年-1年</th>
-                    <td><?=$profit_result1?>　億円</td>
+                    <td name="profit_result1"><?=$profit_result1?>　億円</td>
                 </tr>
                 <tr>
                     <th>平均</th>
-                    <td><?=$profit_resultave?>　億円</td>
+                    <td name="profit_resultave"><?=$profit_resultave?>　億円</td>
                 </tr>
                 </table>
             </div>
@@ -134,19 +135,19 @@ $reason = $_POST["reason"];
                 <table id="plan">
                 <tr>
                     <th>当年</th>
-                    <td><?=$profit_plan1?>　億円</td>
+                    <td name="profit_plan1"><?=$profit_plan1?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年+1年</th>
-                    <td><?=$profit_plan2?>　億円</td>
+                    <td name="profit_plan2"><?=$profit_plan2?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年+2年</th>
-                    <td><?=$profit_plan3?>　億円</td>
+                    <td name="profit_plan3"><?=$profit_plan3?>　億円</td>
                 </tr>
                 <tr>
                     <th>平均</th>
-                    <td><?=$profit_planave?>　億円</td>
+                    <td name="profit_planave"><?=$profit_planave?>　億円</td>
                 </tr>
                 </table>
             </div>
@@ -155,7 +156,7 @@ $reason = $_POST["reason"];
             <table id="headcount">
             <tr>
                 <th>管下組織の従業員数</th>
-                <td><?=$headcount?>　名</td>
+                <td name="headcount"><?=$headcount?>　名</td>
             </tr>
             </table>
         </div>
@@ -163,7 +164,7 @@ $reason = $_POST["reason"];
             <table id="bikou">
             <tr>
                 <th>備考</th>
-                <td><?=$bikou_1?></td>
+                <td name="bikou_1"><?=$bikou_1?></td>
             </tr>
             </table>
         </div>
@@ -177,19 +178,19 @@ $reason = $_POST["reason"];
                 <table id="result">
                 <tr>
                     <th>当年-3年</th>
-                    <td><?=$profitS_result3?>　億円</td>
+                    <td name="profitS_result3"><?=$profitS_result3?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年-2年</th>
-                    <td><?=$profitS_result2?>　億円</td>
+                    <td name="profitS_result2"><?=$profitS_result2?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年-1年</th>
-                    <td><?=$profitS_result1?>　億円</td>
+                    <td name="profitS_result1"><?=$profitS_result1?>　億円</td>
                 </tr>
                 <tr>
                     <th>平均</th>
-                    <td><?=$profitS_resultave?>　億円</td>
+                    <td name="profitS_resultave"><?=$profitS_resultave?>　億円</td>
                 </tr>
                 </table>
             </div>
@@ -198,19 +199,19 @@ $reason = $_POST["reason"];
                 <table id="plan">
                 <tr>
                     <th>当年</th>
-                    <td><?=$profitS_plan1?>　億円</td>
+                    <td name="profitS_plan1"><?=$profitS_plan1?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年+1年</th>
-                    <td><?=$profitS_plan2?>　億円</td>
+                    <td name="profit_plan2"><?=$profitS_plan2?>　億円</td>
                 </tr>
                 <tr>
                     <th>当年+2年</th>
-                    <td><?=$profitS_plan3?>　億円</td>
+                    <td name="profit_plan3"><?=$profitS_plan3?>　億円</td>
                 </tr>
                 <tr>
                     <th>平均</th>
-                    <td><?=$profitS_planave?>　億円</td>
+                    <td name="profitS_planave"><?=$profitS_planave?>　億円</td>
                 </tr>
                 </table>
             </div>
@@ -219,11 +220,11 @@ $reason = $_POST["reason"];
             <table id="headcount">
             <tr>
                 <th>会社の従業員数（単体）</th>
-                <td><?=$headcountS?>　名</td>
+                <td name="headcountS"><?=$headcountS?>　名</td>
             </tr>
             <tr>
                 <th>会社の従業員数（連結）</th>
-                <td><?=$headcountSR?>　名</td>
+                <td name="headcountSR"><?=$headcountSR?>　名</td>
             </tr>
             </table>
         </div>
@@ -231,7 +232,7 @@ $reason = $_POST["reason"];
             <table id="bikou">
             <tr>
                 <th>備考</th>
-                <td><?=$bikou_2?></td>
+                <td id="bikou_2"><?=$bikou_2?></td>
             </tr>
             </table>
         </div>
@@ -242,25 +243,25 @@ $reason = $_POST["reason"];
         <table class="first">
             <tr>
                 <th>類型</th>
-                <td><?=$ruikei?></td>
+                <td name="ruikei"><?=$ruikei?></td>
             </tr>
             <tr>
                 <th>職務タイプ</th>
-                <td><?=$jobtype?></td>
+                <td name="jobtype"><?=$jobtype?></td>
             </tr>
             <tr>
                 <th>事業ステージ</th>
-                <td><?=$jobstage?></td>
+                <td name="jobstage"><?=$jobstage?></td>
             </tr>
             <tr>
                 <th>上位ポジション</th>
-                <td><?=$boss?></td>
+                <td name="boss"><?=$boss?></td>
             </tr>    
         </table>
         <table class="second">
             <tr>
                 <th>申請理由/背景</th>
-                <td><?=$reason?></td>
+                <td name="reason"><?=$reason?></td>
             </tr>    
         </table>
     </div>
