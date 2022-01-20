@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <title>Jobs_apply2</title>
+    <title>Jobs_application</title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <main>
 
-<form action="test_mission.php" method="POST">
+<form action="Jobs_dbinsert.php" method="POST">
     <h1>（１）基本情報</h1>
     <div class="baseinfo">
         <div class="base1">

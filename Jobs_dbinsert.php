@@ -48,7 +48,6 @@ try {
 
 // 3. SQL文を用意（データ登録：INSERT）
 
-
 $stmt = $pdo->prepare(
     "INSERT INTO job_table(id, applygrade, mcgroup, honbu, shozoku, title, candidate, 
     candidatenumber, startdate, mission, profit_result1, profit_result2, profit_result3, 
@@ -109,7 +108,7 @@ if($status==false) {
     $error = $stmt->errorInfo();
     exit("ErrorMassage:".$error[2]);
 } else {
-    header('Location: Jobs_mission.php');
+    header('Location: Jobs_application.php');
 }
 
 

@@ -24,7 +24,7 @@
 
 <main>
 
-<form action="Jobs_mission.php" method="POST">
+<form action="Jobs_mission_insert.php" method="POST">
     <h1>（１）基本情報</h1>
     <div class="baseinfo">
         <div class="base1">
