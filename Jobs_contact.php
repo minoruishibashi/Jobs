@@ -24,7 +24,7 @@
 </header>
 
 <main>
-    <form action="contactinfo.php" method="POST">
+    <form action="Jobs_contact_register.php" method="POST">
         <section id="contact">
                 <dl>
                     <div class="contactflex">

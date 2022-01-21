@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+
+html {
+    font-size:100%;
+}
+
+body  {
+    min-height: 100vh;
+    background-size: cover;
+    font-family: "Open Sans";
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+    margin: 30px 10px;
+}
+
+.baseinfo {
+    display: flex;
+    padding-bottom: 10px;
+    background-image: linear-gradient(#eaf6fd, #2279a5);
+}
+
+.baseinfo dt {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.base1 {
+    margin-left: 20px;
+}
+.base2 {
+    margin-left: 20px;
+}
+.base3 {
+    margin-left: 20px;
+}
+
+.qdata1 {
+    display: flex;
+    background-image: linear-gradient(#eaf6fd, #2279a5);
+}
+h2 {
+    font-weight: bold;
+    margin: 20px 10px;
+}
+.qtitle {
+    font-size: 12px;
+    margin: 10px 10px;
+}
+
+.ptitle {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 10px;
+    color: rebeccapurple;
+}
+
+.profit_result {
+    margin: 10px 10px;
+}
+
+.profit_plan {
+    margin: 10px 10px;
+}
+
+.headcount1 {
+    margin: 10px 10px;
+}
+
+.profit_result dt {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.profit_plan dt {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.headcount1 dt {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.kome {
+    margin: 10px;
+    font-size: 10px;
+}
+
+.additional {
+    display: flex;
+    background-image: linear-gradient(#eaf6fd, #2279a5);
+}
+
+.additional1 {
+    margin: 10px 10px;
+}
+.additional2 {
+    margin: 10px 10px;
+}
+
+.additional1 dt {
+    margin: 5px;
+    font-weight: bold;
+}
+.additional2 dt {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.sendbtn {
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-color: silver;
+}
+
+
+
+.sendbtn :hover {
+    font-weight: bold;
+    color: maroon;
+}

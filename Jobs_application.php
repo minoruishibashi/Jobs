@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/Jobs_apply2.css">
+    <link rel="stylesheet" href="css/Jobs_application.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <header>
     <p>グレード申請画面</p>
     <nav>        
-        <a href="Jobs_contact.html">お問い合わせ</a>
+        <a href="Jobs_contact.php">お問い合わせ</a>
         <a href="Jobs_gradesystem.html">職務評価について</a>
         <a href="Jobs_home.html">HOME</a>  
     </nav>

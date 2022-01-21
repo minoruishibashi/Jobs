@@ -108,7 +108,7 @@ if($status==false) {
     $error = $stmt->errorInfo();
     exit("ErrorMassage:".$error[2]);
 } else {
-    header('Location: Jobs_application.php');
+    header('Location: Jobs_application_after.html');
 }
 
 

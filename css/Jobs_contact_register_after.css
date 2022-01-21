@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+html {
+    font-size:62.5%;
+}
+
+body {
+    background-image: url(cssimags/Pexel_blue3.jpg);
+    background-color: cadetblue;
+    background-size: cover;
+    font-family: "Open Sans";
+    font-size: 2rem;
+}
+
+.message {
+    font-size: 30px;
+    font-weight: bold;
+    color: snow;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+
+nav p {
+    margin: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+main {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+footer {
+    background: #7acbe1;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
