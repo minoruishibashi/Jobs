@@ -41,7 +41,7 @@ $reason = $_POST["reason"];
 // 2. DB接続
 
 try {
-    $pdo = new PDO('mysql:dbname=Jobs;charset=utf8;host=localhost', 'root', 'root');
+    $pdo = new PDO('mysql:dbname=minoruishibashi_jobs;charset=utf8;host=mysql57.minoruishibashi.sakura.ne.jp', 'minoruishibashi', 'mino0303');
 } catch (PDOException $e) {
     exit ('DBConnectError:'.$e->getMessage());
 }
