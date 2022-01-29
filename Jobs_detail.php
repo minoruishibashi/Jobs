@@ -1,3 +1,29 @@
+<?php
+// 更新用
+// Jobs_select.phpから処理を持ってくる。
+// 外部ファイル読み込みしてDB接続（Jobs_funcs.php)
+require_once('Jobs_funcs.php');
+$pdo = db_conn();
+
+// 対象のIDを取得
+$id = $_GET['id'];
+
+// データ取得SQL
+$stmt = $pdo->prepare('SELECT * FROM job_table WHERE id=:id');
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+$status = $stmt->execute();
+
+// データ表示
+$view = '';
+
+if($status == false) {
+    sql_error($stmt);
+}else {
+    $result = $stmt->fetch();
+}
+
+?>
+<!--以下はJobs_application.phpをまるっと. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <title>Jobs_application</title>
+    <title>Jobs_detail</title>
 </head>
 <body>
 
@@ -25,14 +51,14 @@
 
 <main>
 
-<form action="Jobs_dbinsert.php" method="POST">
+<form action="Jobs_update.php" method="POST">
     <h1>（１）基本情報</h1>
     <div class="baseinfo">
         <div class="base1">
             <dl>
                 <dt>申請グレード</dt>
                 <dd>
-                    <select name="applygrade" id="">
+                    <select name="applygrade" id="" value="<?=$result['applygrade']?>">
                         <option value="-">-</option>
                         <option value="G3">G3</option>
                         <option value="G4">G4</option>
@@ -42,7 +68,7 @@
 
                 <dt>グループ/部門</dt>
                 <dd>
-                    <select name="mcgroup" id="">
+                    <select name="mcgroup" id="" value="<?=$result['mcgroup']?>">
                         <option value="-">-</option>
                         <option value="コーポレートスタッフ">コーポレートスタッフ</option>
                         <option value="天然ガス">天然ガス</option>
@@ -60,29 +86,29 @@
                     </select>
                 </dd>
                 <dt>本部</dt>
-                <dd><input type="text" name="honbu"></dd>
+                <dd><input type="text" name="honbu" value="<?=$result['honbu']?>"></dd>
                 <dt>所属</dt>
-                <dd><input type="text" name="shozoku"></dd>
+                <dd><input type="text" name="shozoku" value="<?=$result['shozoku']?>"></dd>
                 <dt>役職</dt>
-                <dd><input type="text" name="title"></dd>
+                <dd><input type="text" name="title" value="<?=$result['title']?>"></dd>
             </dl>
         </div>
 
         <div class="base2">
             <dl>
                 <dt>就任予定者</dt>
-                <dd><input type="text" name="candidate"></dd>
+                <dd><input type="text" name="candidate" value="<?=$result['candidate']?>"></dd>
                 <dt>従業員番号</dt>
-                <dd><input type="text" name="candidatenumber"></dd>
+                <dd><input type="text" name="candidatenumber" value="<?=$result['candidatenumber']?>"></dd>
                 <dt>開始予定日</dt>
-                <dd><input type="date" name="startdate"></dd>
+                <dd><input type="date" name="startdate" value="<?=$result['startdate']?>"></dd>
             </dl>
         </div>
 
         <div class="base3">
             <dt>当該職務の役割</dt>
             <p>（当該職務に求められる役割を具体的に記載願います）</p>
-            <dd><textarea name="mission" id="" cols="90" rows="8"></textarea></dd>
+            <dd><textarea name="mission" id="" cols="90" rows="8"><?=$result['mission']?></textarea></dd>
         </div>
     </div>
 
@@ -95,13 +121,13 @@
                 <p class="ptitle">直近3年の利益実績（純利益）※</p>
                 <dl>
                     <dt>当年-3年</dt>
-                    <dd><input type="number" name="profit_result1">億円</dd>
+                    <dd><input type="number" name="profit_result1" value="<?=$result['profit_result1']?>">億円</dd>
                     <dt>当年-2年<</dt>
-                    <dd><input type="number" name="profit_result2">億円</dd>
+                    <dd><input type="number" name="profit_result2" value="<?=$result['profit_result2']?>">億円</dd>
                     <dt>当年-1年</dt>
-                    <dd><input type="number" name="profit_result3">億円</dd>
+                    <dd><input type="number" name="profit_result3" value="<?=$result['profit_result3']?>">億円</dd>
                     <dt>直近3年の平均</dt>
-                    <dd><input type="number" name="profit_resultave">億円</dd>
+                    <dd><input type="number" name="profit_resultave" value="<?=$result['profit_resultave']?>">億円</dd>
                 </dl>
             </div>
 
@@ -109,13 +135,13 @@
                 <p class="ptitle">3年先迄の利益計画（純利益）※</p>
                 <dl>
                     <dt>当年</dt>
-                    <dd><input type="number" name="profit_plan1">億円</dd>
+                    <dd><input type="number" name="profit_plan1" value="<?=$result['profit_plan1']?>">億円</dd>
                     <dt>当年+1年</dt>
-                    <dd><input type="number" name="profit_plan2">億円</dd>
+                    <dd><input type="number" name="profit_plan2" value="<?=$result['profit_plan2']?>">億円</dd>
                     <dt>当年+2年</dt>
-                    <dd><input type="number" name="profit_plan3">億円</dd>
+                    <dd><input type="number" name="profit_plan3" value="<?=$result['profit_plan3']?>">億円</dd>
                     <dt>今後3年の平均</dt>
-                    <dd><input type="number" name="profit_planave">億円</dd>
+                    <dd><input type="number" name="profit_planave" value="<?=$result['profit_planave']?>">億円</dd>
                 </dl>
             
             </div>      
@@ -123,11 +149,11 @@
                 <p class="ptitle">その他</p>    
                 <dl>
                 <dt>管下組織の従業員数</dt>
-                <dd><input type="number" name="headcount">人</dd>
+                <dd><input type="number" name="headcount" value="<?=$result['headcount']?>">人</dd>
                 </dl>
                 <dt>備考</dt>
                 <p>（上記定量的情報について補足があれば記載願います）</p>
-                <dd><textarea name="bikou_1" id="" cols="70" rows="2"></textarea></dd>
+                <dd><textarea name="bikou_1" id="" cols="70" rows="2"><?=$result['bikou_1']?></textarea></dd>
             </div>    
     
         </div>
@@ -142,13 +168,13 @@
                 <p class="ptitle">直近3年の利益実績（純利益）</p>
                 <dl>
                     <dt>当年-3年</dt>
-                    <dd><input type="number" name="profitS_result1">億円</dd>
+                    <dd><input type="number" name="profitS_result1" value="<?=$result['profitS_result1']?>">億円</dd>
                     <dt>当年-2年</dt>
-                    <dd><input type="number" name="profitS_result2">億円</dd>
+                    <dd><input type="number" name="profitS_result2" value="<?=$result['profitS_result2']?>">億円</dd>
                     <dt>当年-3年</dt>
-                    <dd><input type="number" name="profitS_result3">億円</dd>
+                    <dd><input type="number" name="profitS_result3" value="<?=$result['profitS_result3']?>">億円</dd>
                     <dt>直近3年の平均</dt>
-                    <dd><input type="number" name="profitS_resultave">億円</dd>
+                    <dd><input type="number" name="profitS_resultave" value="<?=$result['profitS_resultave']?>">億円</dd>
                 </dl>
             </div>
 
@@ -156,13 +182,13 @@
                 <p class="ptitle">3年先迄の利益計画（純利益）</p>
                 <dl>
                     <dt>当年</dt>
-                    <dd><input type="number" name="profitS_plan1">億円</dd>
+                    <dd><input type="number" name="profitS_plan1" value="<?=$result['profitS_plan1']?>">億円</dd>
                     <dt>当年+1年</dt>
-                    <dd><input type="number" name="profitS_plan2">億円</dd>
+                    <dd><input type="number" name="profitS_plan2" value="<?=$result['profitS_plan2']?>">億円</dd>
                     <dt>当年+2年</dt>
-                    <dd><input type="number" name="profitS_plan3">億円</dd>
+                    <dd><input type="number" name="profitS_plan3" value="<?=$result['profitS_plan3']?>">億円</dd>
                     <dt>今後3年の平均</dt>
-                    <dd><input type="number" name="profitS_planave">億円</dd>
+                    <dd><input type="number" name="profitS_planave" value="<?=$result['profitS_planave']?>">億円</dd>
                 </dl>
             </div>
                 
@@ -170,12 +196,12 @@
                 <p class="ptitle">その他</p>
                 <dl>
                     <dt>会社の従業員数</dt>
-                    <dd>単体:<input type="number" name="headcountS">人</dd>
-                    <dd>連結:<input type="number" name="headcountSR">人</dd>
+                    <dd>単体:<input type="number" name="headcountS" value="<?=$result['headcountS']?>">人</dd>
+                    <dd>連結:<input type="number" name="headcountSR" value="<?=$result['headcountSR']?>">人</dd>
                 </dl>
                 <dt>備考</dt>
                 <p>（上記定量的情報について補足があれば記載願います）</p>
-                <dd><textarea name="bikou_2" id="" cols="70" rows="2"></textarea></dd>
+                <dd><textarea name="bikou_2" id="" cols="70" rows="2"><?=$result['bikou_2']?></textarea></dd>
             </div> 
 
         </div>
@@ -190,7 +216,7 @@
             <dl>
                 <dt>事業類型</dt>
                 <dt>
-                    <select name="ruikei" id="ruikei">
+                    <select name="ruikei" id="ruikei" value="<?=$result['ruikei']?>">
                         <option value="-">-</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
@@ -203,7 +229,7 @@
         
             <dt>職務タイプ</dt>
             <dd>
-                <select name="jobtype" id="">
+                <select name="jobtype" id="" value="<?=$result['jobtype']?>">
                     <option value="-">-</option>
                     <option value="事業会社トップ">事業会社トップ</option>
                     <option value="事業会社ラインポジション">事業会社ラインポジション</option>
@@ -219,7 +245,7 @@
 
             <dt>事業ステージ</dt>
             <dd>
-                <select name="jobstage" id="jobstage">
+                <select name="jobstage" id="jobstage" value="<?=$result['jobstage']?>">
                     <option value="-">-</option>
                     <option value="立ち上げ/導入期">立ち上げ/導入期</option>
                     <option value="成長期">成長期</option>
@@ -230,18 +256,19 @@
             </dd>
 
             <dt>上位ポジション（レポートTO）</dt>
-            <dd><input type="text" name="boss"></dd>
+            <dd><input type="text" name="boss" value="<?=$result['boss']?>"></dd>
             </dl>
         </div>
         
         <div class="additional2">
             <dt>申請の理由/背景</dt>
-                <dd><textarea name="reason" id="reason" cols="80" rows="7"></textarea></dd>
+                <dd><textarea name="reason" id="reason" cols="80" rows="7"><?=$result['reason']?></textarea></dd>
         </div>
 
     </div>
 
     <div class="sendbtn">
+        <input type="hidden" name="id" value="<?= $result['id']?>">
         <input type="submit" value="グレード申請">
     </div> 
 

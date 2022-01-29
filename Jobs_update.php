@@ -1,7 +1,5 @@
 <?php
-
-//1. POSTデータ取得
-
+// postデータ取得
 $applygrade = $_POST["applygrade"];
 $mcgroup = $_POST["mcgroup"];
 $honbu = $_POST["honbu"];
@@ -37,28 +35,33 @@ $jobtype = $_POST["jobtype"];
 $jobstage = $_POST["jobstage"];
 $boss = $_POST["boss"];
 $reason = $_POST["reason"];
+$id = $_POST["id"];
 
-// 2. DB接続
+
+// DB接続
 require_once('Jobs_funcs.php'); 
 $pdo = db_conn();
 
 
+// データ更新SQL
+
 $stmt = $pdo->prepare(
-    "INSERT INTO job_table(id, applygrade, mcgroup, honbu, shozoku, title, candidate, 
-    candidatenumber, startdate, mission, profit_result1, profit_result2, profit_result3, 
-    profit_resultave, profit_plan1, profit_plan2, profit_plan3, profit_planave, headcount, 
-    bikou_1, profitS_result1, profitS_result2, profitS_result3, profitS_resultave, 
-    profitS_plan1, profitS_plan2, profitS_plan3, profitS_planave, headcountS, headcountSR,
-    bikou_2, ruikei, jobtype, jobstage, boss, reason)
-    VALUES( NULL, :applygrade, :mcgroup, :honbu, :shozoku, :title, :candidate, 
-    :candidatenumber, :startdate, :mission, :profit_result1, :profit_result2, :profit_result3, 
-    :profit_resultave, :profit_plan1, :profit_plan2, :profit_plan3, :profit_planave, :headcount, 
-    :bikou_1, :profitS_result1, :profitS_result2, :profitS_result3, :profitS_resultave, 
-    :profitS_plan1, :profitS_plan2, :profitS_plan3, :profitS_planave, :headcountS, :headcountSR,
-    :bikou_2, :ruikei, :jobtype, :jobstage, :boss, :reason)"
+    "UPDATE job_table SET applygrade=:applygrade , mcgroup=:mcgroup , honbu=:honbu, 
+    shozoku=:shozoku , title=:title , candidate=:candidate , candidatenumber=:candidatenumber ,
+    startdate=:startdate , mission=:mission, profit_result1=:profit_result1 , 
+    profit_result2=:profit_result2 , profit_result3=:profit_result3 , 
+    profit_resultave=:profit_resultave , profit_plan1=:profit_plan1 , 
+    profit_plan2=:profit_plan2, profit_plan3=:profit_plan3, profit_planave=:profit_planave, 
+    headcount=:headcount, bikou_1=:bikou_1, profitS_result1=:profitS_result1, 
+    profitS_result2=:profitS_result2, profitS_result3=:profitS_result3, 
+    profitS_resultave=:profitS_resultave, profitS_plan1=:profitS_plan1, 
+    profitS_plan2=:profitS_plan2, profitS_plan3=:profitS_plan3, 
+    profitS_planave=:profitS_planave, headcountS=:headcountS, headcountSR=:headcountSR,
+    bikou_2=:bikou_2, ruikei=:ruikei, jobtype=:jobtype, jobstage=:jobstage, 
+    boss=:boss, reason=:reason, indate=sysdate() WHERE id=:id "
 );
 
-// 4. バインド変数を用意
+
 $stmt->bindValue(':applygrade', $applygrade, PDO::PARAM_STR);
 $stmt->bindValue(':mcgroup', $mcgroup, PDO::PARAM_STR);
 $stmt->bindValue(':honbu', $honbu, PDO::PARAM_STR);
@@ -94,17 +97,19 @@ $stmt->bindValue(':jobtype', $jobtype, PDO::PARAM_STR);
 $stmt->bindValue(':jobstage', $jobstage, PDO::PARAM_STR);
 $stmt->bindValue(':boss', $boss, PDO::PARAM_STR);
 $stmt->bindValue(':reason', $reason, PDO::PARAM_STR);
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
 
-// 5. 実行
 $status = $stmt->execute();
 
-// 6. データ登録処理後
-if($status==false) {
-    $error = $stmt->errorInfo();
-    exit("ErrorMassage:".$error[2]);
-} else {
-    header('Location: Jobs_application_after.html');
+
+
+// データ登録後処理
+if($status == false) {
+    sql_error($stmt);
+}else {
+    redirect('Jobs_select.php');
 }
+
 
 
 ?>
