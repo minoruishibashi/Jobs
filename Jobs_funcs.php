@@ -9,7 +9,7 @@ function h($str) {
 function db_conn(){
     try {
         $db_name = "minoruishibashi_jobs";  //データベース名
-        $db_id = "minoruishibashi'";  //アカウント名
+        $db_id = "minoruishibashi";  //アカウント名
         $db_pw = "mino0303";  //パスワード
         $db_host = "mysql57.minoruishibashi.sakura.ne.jp";  //DBホスト
         $pdo = new PDO('mysql:dbname=' . $db_name . ';charset=utf8;host=' . $db_host, $db_id, $db_pw);
