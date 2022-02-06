@@ -1,7 +1,16 @@
 <?php
+session_start();
+
+// 関数呼び出し
+require_once('Jobs_funcs.php');
+
+// ログインチェック
+loginCheck();
+
+$user_name = $_SESSION['name'];
+$kanriflg = $_SESSION['kanriflg'];
 
 // DB接続
-require_once('Jobs_funcs.php');
 $pdo = db_conn();
 
 // データ SQL
@@ -55,7 +64,14 @@ if ($status == false) {
                 <div class="navbar-header">
                     <a class="navbar-brand" href="Jobs_select.php">データ一覧</a>
                 </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Jobs_login.php">ログイン</a>
+                </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Jobs_logout.php">ログアウト</a>
+                </div>
             </div>
+            <p><?=$user_name?></p>
         </nav>
     </header>
     <!-- Head[End] -->
@@ -66,7 +82,12 @@ if ($status == false) {
             <a href="Jobs_detail.php"></a>
             <?= $view ?>
         </div>
+        <div class="container jumbotron">
+            <a href=""></a>
+
+        </div>
     </div>
+
     <!-- Main[End] -->
 
 </body>
